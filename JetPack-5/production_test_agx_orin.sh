@@ -110,6 +110,7 @@ function test_menu {
 		echo "24) Digital In-2 Test"
 		echo "25) Digital In-3 Test"
 		echo "26) 6-AXIS IMU & Temperature Sensor Test"
+		echo "27) Fan Test"
 		read -p "Type the test number (or quit) [1/.../q]: " choice
 		echo ""
 
@@ -241,6 +242,10 @@ function test_menu {
 				else
 					echo "Could not found"
 				fi
+				;;
+			27 )
+				echo "Fan Test"
+				sudo gnome-terminal -- $SCRIPTS_FOLDER/test_fan.sh
 				;;
 			[Qq]* )
 				echo "Quitting ..."
